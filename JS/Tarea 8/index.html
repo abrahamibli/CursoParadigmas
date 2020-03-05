@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 7</title>
+</head>
+<body>
+    <h1>Ingresa tus datos</h1>
+    <p>Nombre <input type="text" id="nombre"></p>
+    <p>
+        Sexo
+        <select id="sexo">
+            <option value="1">Masculino</option>
+            <option value="2">Femenino</option>
+        </select>
+    </p>
+    <button onclick="msj(document.getElementById('nombre').value, document.getElementById('sexo').value);">Enviar</button>
+    <h2 id="resultado"></h2>
+    <script src="index.js"></script>
+</body>
+</html>
