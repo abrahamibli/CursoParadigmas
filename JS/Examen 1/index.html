@@ -6,53 +6,69 @@
     <title>BillarScript</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
-<body>
-    <h1 class="h1 text-center">Bienvenido a BillarScript</h1>
-    <div class="container mt-5 text-center">
-        <div class="row">
+<body style="background-image: url('./assets/background3.jpg'); background-attachment: fixed;">
+    <h1 class="text-center text-white">Bienvenido a BillarScript</h1>
+    <h3 class="text-center text-white">Elige una mesa</h3>
+    <div class="container mt-5 text-center text-white">
+        <div class="row justify-content-start">
+            <div class="col-sm align-self-center">
+                <h5>Mesa de Poker</h5>
+                <img src="./assets/poker_table_off.png" height="120" id="pokerTable" onclick="changePokerState();">
+                <h6 id="hInicioPoker">Hora de Inicio: </h6>
+                <h6 id="hFinalPoker">Hora Final: </h6>
+                <h6 id="totalPoker">Total: </h6>
+            </div>
             <div class="col-sm">
                 <h4>Mesa 1</h4>
-                <img src="./assets/apagado.png" id="table1" onclick="changeState('1');">
+                <img src="./assets/apagado.png" id="table1" onclick="changeTableState('1');">
                 <h6 id="hInicio1">Hora de Inicio: </h6>
                 <h6 id="hFinal1">Hora Final: </h6>
                 <h6 id="total1">Total: </h6>
             </div>
             <div class="col-sm">
                 <h4>Mesa 2</h4>
-                <img src="./assets/apagado.png" id="table2" onclick="changeState('2');">
+                <img src="./assets/apagado.png" id="table2" onclick="changeTableState('2');">
                 <h6 id="hInicio2">Hora de Inicio: </h6>
                 <h6 id="hFinal2">Hora Final: </h6>
                 <h6 id="total2">Total: </h6>
             </div>
             <div class="col-sm">
                 <h4>Mesa 3</h4>
-                <img src="./assets/apagado.png" id="table3" onclick="changeState('3');">
+                <img src="./assets/apagado.png" id="table3" onclick="changeTableState('3');">
                 <h6 id="hInicio3">Hora de Inicio: </h6>
                 <h6 id="hFinal3">Hora Final: </h6>
                 <h6 id="total3">Total: </h6>
             </div>
         </div>
-        <div class="row mt-5">
+        <div class="row mt-3">
             <div class="col-sm">
                 <h4>Mesa 4</h4>
-                <img src="./assets/apagado.png" id="table4" onclick="changeState('4');">
+                <img src="./assets/apagado.png" id="table4" onclick="changeTableState('4');">
                 <h6 id="hInicio4">Hora de Inicio: </h6>
                 <h6 id="hFinal4">Hora Final: </h6>
                 <h6 id="total4">Total: </h6>
             </div>
             <div class="col-sm">
                 <h4>Mesa 5</h4>
-                <img src="./assets/apagado.png" id="table5" onclick="changeState('5');">
+                <img src="./assets/apagado.png" id="table5" onclick="changeTableState('5');">
                 <h6 id="hInicio5">Hora de Inicio: </h6>
                 <h6 id="hFinal5">Hora Final: </h6>
                 <h6 id="total5">Total: </h6>
             </div>
             <div class="col-sm">
                 <h4>Mesa 6</h4>
-                <img src="./assets/apagado.png" id="table6" onclick="changeState('6');">
+                <img src="./assets/apagado.png" id="table6" onclick="changeTableState('6');">
                 <h6 id="hInicio6">Hora de Inicio: </h6>
                 <h6 id="hFinal6">Hora Final: </h6>
                 <h6 id="total6">Total: </h6>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-lg">
+                <img src="./assets/bar_table2.png" style="transform: rotate(180deg); position: relative;" onclick="randomProduct();">
+            </div>
+            <div class="col-lg align-self-center">
+                <h6 id="productDescription"></h6>
             </div>
         </div>
     </div>
