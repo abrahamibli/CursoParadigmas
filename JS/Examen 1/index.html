@@ -3,9 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>BillarScript</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
-    
+    <h1 class="h1 text-center">Bienvenido a BillarScript</h1>
+    <div class="container mt-5 text-center">
+        <div class="row">
+            <div class="col-sm">
+                <h4>Mesa 1</h4>
+                <img src="./assets/apagado.png" id="table1" onclick="changeState('1');">
+                <h6 id="hInicio1">Hora de Inicio: </h6>
+                <h6 id="hFinal1">Hora Final: </h6>
+                <h6 id="total1">Total: </h6>
+            </div>
+            <div class="col-sm">
+                <h4>Mesa 2</h4>
+                <img src="./assets/apagado.png" id="table2" onclick="changeState('2');">
+                <h6 id="hInicio2">Hora de Inicio: </h6>
+                <h6 id="hFinal2">Hora Final: </h6>
+                <h6 id="total2">Total: </h6>
+            </div>
+            <div class="col-sm">
+                <h4>Mesa 3</h4>
+                <img src="./assets/apagado.png" id="table3" onclick="changeState('3');">
+                <h6 id="hInicio3">Hora de Inicio: </h6>
+                <h6 id="hFinal3">Hora Final: </h6>
+                <h6 id="total3">Total: </h6>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-sm">
+                <h4>Mesa 4</h4>
+                <img src="./assets/apagado.png" id="table4" onclick="changeState('4');">
+                <h6 id="hInicio4">Hora de Inicio: </h6>
+                <h6 id="hFinal4">Hora Final: </h6>
+                <h6 id="total4">Total: </h6>
+            </div>
+            <div class="col-sm">
+                <h4>Mesa 5</h4>
+                <img src="./assets/apagado.png" id="table5" onclick="changeState('5');">
+                <h6 id="hInicio5">Hora de Inicio: </h6>
+                <h6 id="hFinal5">Hora Final: </h6>
+                <h6 id="total5">Total: </h6>
+            </div>
+            <div class="col-sm">
+                <h4>Mesa 6</h4>
+                <img src="./assets/apagado.png" id="table6" onclick="changeState('6');">
+                <h6 id="hInicio6">Hora de Inicio: </h6>
+                <h6 id="hFinal6">Hora Final: </h6>
+                <h6 id="total6">Total: </h6>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
 </body>
 </html>
