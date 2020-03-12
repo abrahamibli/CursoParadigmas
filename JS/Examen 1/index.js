@@ -7,6 +7,7 @@ const changeTableState = number => {
     table = document.getElementById(`table${number}`);
 
     if(table.src.match("./assets/apagado.png")) {
+        resetValues(`hInicio${number}`, `hFinal${number}`, `total${number}`);
         table.src = "./assets/encendido.png";
         startTime = new Date();
         document.getElementById(`hInicio${number}`).innerHTML = `Hora de Inicio: ${startTime.getHours()}:${startTime.getMinutes()}:${startTime.getSeconds()}`;
@@ -33,6 +34,7 @@ const changePokerState = () => {
     table = document.getElementById("pokerTable");
 
     if(table.src.match("./assets/poker_table_off.png")) {
+        resetValues("hInicioPoker", "hFinalPoker", "totalPoker");
         table.src = "./assets/poker_table.png";
         startTime = new Date();
         document.getElementById("hInicioPoker").innerHTML = `Hora de Inicio: ${startTime.getHours()}:${startTime.getMinutes()}:${startTime.getSeconds()}`;
@@ -40,6 +42,12 @@ const changePokerState = () => {
         table.src = "./assets/poker_table_off.png";
         finalTime = new Date();
         document.getElementById("hFinalPoker").innerHTML = `Hora Final: ${finalTime.getHours()}:${finalTime.getMinutes()}:${finalTime.getSeconds()}`;
-        document.getElementById("totalPoker").innerHTML = `Total: $${getTotal(poolCost, startTime, finalTime)} pesos`;
+        document.getElementById("totalPoker").innerHTML = `Total: $${getTotal(pokerCost, startTime, finalTime)} pesos`;
     }
+};
+
+const resetValues = (hInicioId, hFinalId, totalId) => {
+    document.getElementById(hInicioId).innerHTML = "Hora de Inicio: ";
+    document.getElementById(hFinalId).innerHTML = "Hora Final: ";
+    document.getElementById(totalId).innerHTML = "Total: ";
 };
