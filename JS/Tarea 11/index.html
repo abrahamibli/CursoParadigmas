@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 11</title>
+</head>
+<body>
+    <h2>Ejemplo map</h2>
+    <label for="input_map">Existe el siguiente arreglo: [1, 2, 4, 8], introduce por cuanto se desea multiplicar cada numero</label>
+    <input type="text" id="input_map">
+    <button onclick="mapArray(document.getElementById('input_map').value);">Enviar</button>
+    <p>El resultado es:</p>
+    <p id="res_map"></p>
+    <br>
+    <h2>Ejemplo filter</h2>
+    <label for="input_filter">Existe el mismo arreglo, se va a filtrar el arreglo dejando solo los numeros mayores al numero a introducir</label>
+    <input type="text" id="input_filter">
+    <button onclick="filterArray(document.getElementById('input_filter').value);">Enviar</button>
+    <p>El resultado es:</p>
+    <p id="res_filter"></p>
+    <br>
+    <h2>Ejemplo reduce</h2>
+    <label for="input_reduce">Existe el mismo arreglo, se van a sumar sus elementos + un valor inicial, introduce el valor inicial</label>
+    <input type="text" id="input_reduce">
+    <button onclick="reduceArray(document.getElementById('input_reduce').value);">Enviar</button>
+    <p>El resultado es:</p>
+    <p id="res_reduce"></p>
+    <script src="script.js"></script>
+</body>
+</html>
