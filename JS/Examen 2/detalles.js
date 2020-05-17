@@ -42,9 +42,13 @@ const detail = (data) => {
     let body2 = document.createElement('div');
     body2.className = "card-body";
     body2.innerHTML = '<h5 class="card-title">Comics:</h5>';
-    data.comics.items.forEach(element => {
-        body2.innerHTML += `<p> - ${element.name}</p>`;
-    });
+    if(data.comics.items.length != 0) {
+        data.comics.items.forEach(element => {
+            body2.innerHTML += `<p> - ${element.name}</p>`;
+        });
+    }else {
+        body2.innerHTML += '<p> Este personaje no tiene comics disponibles </p>';
+    }
     cardComics.appendChild(body2);
 
 }
