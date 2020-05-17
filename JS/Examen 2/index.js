@@ -6,23 +6,23 @@ const getData = async () => {
     const ts = '1';
     const hash = '61a15d1b209fbedd061f988de5602572';
     let offset = 0;
-    offset += (currentPage*30);
+    offset += (currentPage * 30);
     const url = `https://gateway.marvel.com/v1/public/characters?limit=30&apikey=${api_key}&ts=${ts}&offset=${offset}&hash=${hash}`;
 
     params = {
         method: 'GET',
     }
-    
+
     try {
         const response = await fetch(url, params);
-        if(response.status == 200) {
+        if (response.status == 200) {
             const json = await response.json();
             console.log(json.data.results);
             addInfo(json.data.results);
-        }else {
+        } else {
             throw 'error';
         }
-    }catch(e) {
+    } catch (e) {
         console.log(e);
     }
 }
@@ -34,7 +34,7 @@ const addInfo = (data) => {
         fila.className = "list-group-item list-group-item-action";
         console.log(element.id);
         fila.href = `detalles.html?id=${element.id}`;
-        fila.innerHTML = `<span class="badge badge-primary badge-pill justify-content-between">${element.id}</span> ${element.name}`;
+        fila.innerHTML = `<span class="badge badge-primary badge-pill justify-content-between">${element.id}</span> <p class="" style="display: inline;"> ${element.name} </p> <p class="text-secondary" style="height:30px;line-height:30px; overflow: hidden;">${element.description || 'Este personaje no tiene descripcion'} </p>`;
         list.appendChild(fila);
     });
 };
