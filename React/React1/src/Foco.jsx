@@ -10,9 +10,12 @@ const Foco = (props) => {
 
     return (
         <Fragment>
-            {props.ubicacion}
-            <img src={estadoFoco ? "assets/focoOn.png" : "assets/focoOff.png"} onClick={ control } alt="foco"/>
-            <br/>
+            <div style={{display: "inline-block"}}>
+                <div style={{float: "left", width: "50%"}}>
+                    <img src={estadoFoco ? "assets/focoOn.png" : "assets/focoOff.png"} height="150" onClick={ control } alt="foco"/>
+                    {props.ubicacion}
+                </div>
+            </div>
         </Fragment>
     );
 }

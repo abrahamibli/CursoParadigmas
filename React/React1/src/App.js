@@ -5,7 +5,7 @@ import Foco from './Foco';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" style={{backgroundColor: 'grey'}}>
       <header className="App-header">
         <Foco ubicacion="Sala" />
         <Foco ubicacion="Comedor" />
