@@ -1,0 +1,57 @@
+.App {
+  text-align: center;
+}
+
+.header {
+  background-color: rgb(215, 189, 30);
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.header-title {
+  margin-left: 20px;
+}
+
+.task-form {
+  border-radius: 10px;
+  background-color: white;
+  margin: 20px 0px;
+  text-align: start;
+  align-items: flex-start;
+  padding: 30px 70px;
+}
+
+.btn {
+  margin-top: 20px;
+  background-color: rgb(215, 189, 30) !important;
+}
+
+.app-primary-text {
+  color: rgb(215, 189, 30);
+}
+
+.app-title-text {
+  color: rgb(215, 189, 30);
+  margin-bottom: 10px;
+}
+
+.table {
+  cursor: pointer;
+}
+
+.App-link {
+  color: rgb(215, 189, 30);
+}
+
+.task-list {
+  padding: 30px 70px;
+  border-radius: 10px;
+  background-color: white;
+  margin: 20px 0px;
+  text-align: start;
+}
