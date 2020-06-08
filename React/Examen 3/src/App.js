@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import TaskList from './components/tasks-list';
 import Header from './components/header';
@@ -10,7 +10,6 @@ function App() {
   const db = firebase.firestore();
 
   const [tasks, setTasks] = useState([]);
-  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     getTasks();
@@ -32,7 +31,8 @@ function App() {
       const newTask = {
         'name': name,
         'description': description,
-        'urgent': urgent 
+        'urgent': urgent,
+        'finished': false
       }
       const snapshot = await db.collection(collection).add(newTask);
 
@@ -46,20 +46,23 @@ function App() {
     }
   }
 
-  const updateTask = async (id, name, description, urgent) => {
+  const updateTask = async (id, name, description, urgent, finished) => {
     try {
-      const snapshot = await db.collection(collection).doc(id).update({
+      await db.collection(collection).doc(id).update({
         'name': name,
         'description': description,
-        'urgent': urgent
+        'urgent': urgent,
+        'finished': finished
       });
-      setTasks([tasks.map((task) => {
+      let newTasks = tasks.map((task) => {
         if(task.id === id) 
-          return {'id': id, 'name': name, 'description': description, 'urgent': urgent}
+          return {'id': id, 'name': name, 'description': description, 'urgent': urgent, 'finished': finished}
         else
           return task;
-      })]);
-      console.log(`task updated: ${snapshot}`);
+      });
+      setTasks(newTasks);
+      console.log('task updated');
+      console.log(newTasks);
     }catch(error) {
       console.error(error);
     }
@@ -80,7 +83,7 @@ function App() {
       <div className="container">
         <Header />
         <TaskForm addTask={addTask} title="Añadir Nueva Tarea" buttonText="Añadir Tarea"/>
-        <TaskList tasks={tasks} updateTask={updateTask}/>
+        <TaskList tasks={tasks} updateTask={updateTask} deleteTask={deleteTask}/>
       </div>
     </div>
   );

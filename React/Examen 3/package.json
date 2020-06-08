@@ -12,7 +12,6 @@
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.1",
     "react-dom": "^16.13.1",
-    "react-portal-overlay": "^1.0.0",
     "react-scripts": "3.4.1"
   },
   "scripts": {

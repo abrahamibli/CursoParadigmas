@@ -2,9 +2,14 @@
   text-align: center;
 }
 
+.container {
+  max-width: 1440px !important;
+  margin: auto !important;
+}
+
 .header {
-  background-color: rgb(215, 189, 30);
-  height: 80px;
+  background: transparent;/*radial-gradient(circle, rgb(253, 198, 54, .7) 62%, rgb(225, 160, 26, .7) 100%) !important;*/
+  height: 3em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,7 +19,15 @@
 }
 
 .header-title {
-  margin-left: 20px;
+  padding-top: 12px;
+  padding-left: 20px; 
+  display: inline; 
+  color: #353535;
+  font-size: 2em;
+}
+
+.logo {
+  padding-top: 12px;
 }
 
 .task-form {
@@ -26,22 +39,46 @@
   padding: 30px 70px;
 }
 
-.btn {
+.btn-bonito {
   margin-top: 20px;
-  background-color: rgb(215, 189, 30) !important;
+  background-color: #ff722c !important;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: .3s ease-in-out;
+}
+
+.btn-bonito:focus{
+  box-shadow: none;
+  outline: none;
+}
+.btn-bonito:hover{
+  opacity: .7;
+}
+
+.delete-task-btn {
+  cursor: pointer;
+  color: red;
+  opacity: .7;
+}
+
+.edit-task-btn {
+  cursor: pointer;
+  color: blue;
+}
+
+.finished-task-btn {
+  cursor: pointer;
 }
 
 .app-primary-text {
-  color: rgb(215, 189, 30);
+  color: rgb(225, 160, 26, .7);
 }
 
 .app-title-text {
-  color: rgb(215, 189, 30);
+  color: #ff722c;
   margin-bottom: 10px;
-}
-
-.table {
-  cursor: pointer;
 }
 
 .App-link {
@@ -54,4 +91,74 @@
   background-color: white;
   margin: 20px 0px;
   text-align: start;
+  position: relative;
+}
+
+.task-list-finished {
+  padding: 30px 70px;
+  border-radius: 10px;
+  background-color: white;
+  margin: 20px 0px;
+  text-align: start;
+  position: relative;
+}
+
+input[type="checkbox"] {
+  transform:scale(2, 2);
+}
+
+#cancel-btn-none {
+  display: none;
+}
+
+.btn-cancel {
+  float: right;
+  background-color: rgb(255, 0, 0, .7) !important;
+}
+
+.task-control-btn {
+  border-radius: 5px;
+  background-color: purple;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  transition: .3s ease-in-out;
+}
+
+.task-control-btn:focus{
+  outline: none;
+  
+}
+.task-control-btn:hover{
+  transform: scale(1.05);
+}
+.trash-btn{
+  background: transparent;
+  color: red;
+  border: none;
+  font-size: 35px;
+  transition: .3s ease-in-out;
+}
+.trash-btn:hover{
+  transform: scale(1.05);
+}
+.m-r-15{
+  margin-right: 15px;
+}
+.p-r-10{
+  padding-right: 10px;
+}
+
+.m-t-10 {
+  margin-top: 10px;
+}
+
+.header img{
+  max-width: 90px;
+  height: 100%;
+  width: 100%;
+}
+
+.red {
+  background-color: red;
 }
