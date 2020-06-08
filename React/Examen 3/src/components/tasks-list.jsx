@@ -91,14 +91,17 @@ const TaskList = (props) => {
                                         <td >
 
                                         </td>
-                                        <div className="col-sm-2 task-contol-col">
-                                            <div className="row">
-                                                <button className="task-control-btn" onClick={() => handleOpenModal(task)} data-toggle="tooltip" data-placement="right" title="Editar"><i class="fas fa-pencil-alt"></i></button>
+                                        <td>
+                                            <div className="col-sm-2 task-contol-col">
+                                                <div className="row">
+                                                    <button className="task-control-btn" onClick={() => handleOpenModal(task)} data-toggle="tooltip" data-placement="right" title="Editar"><i className="fas fa-pencil-alt"></i></button>
+                                                </div>
+                                                <div className="row">
+                                                    <button className="task-control-btn red m-t-10" onClick={() => props.deleteTask(task.id)} data-toggle="tooltip" data-placement="right" title="Eliminar"><i className="fas fa-trash-alt"></i></button>
+                                                </div>
                                             </div>
-                                            <div className="row">
-                                                <button className="task-control-btn red m-t-10" onClick={() => props.deleteTask(task.id)} data-toggle="tooltip" data-placement="right" title="Eliminar"><i class="fas fa-trash-alt"></i></button>
-                                            </div>
-                                        </div>
+                                        </td>
+
                                     </tr>
                                 )
                             })
@@ -154,10 +157,10 @@ const TaskList = (props) => {
                                         <td >
                                             <div className="col-sm-2 task-contol-col">
                                                 <div className="row">
-                                                    <button className="task-control-btn" onClick={() => handleOpenModal(task)} data-toggle="tooltip" data-placement="right" title="Editar"><i class="fas fa-pencil-alt"></i></button>
+                                                    <button className="task-control-btn" onClick={() => handleOpenModal(task)} data-toggle="tooltip" data-placement="right" title="Editar"><i className="fas fa-pencil-alt"></i></button>
                                                 </div>
                                                 <div className="row">
-                                                    <button className="task-control-btn red m-t-10" onClick={() => props.deleteTask(task.id)} data-toggle="tooltip" data-placement="right" title="Eliminar"><i class="fas fa-trash-alt"></i></button>
+                                                    <button className="task-control-btn red m-t-10" onClick={() => props.deleteTask(task.id)} data-toggle="tooltip" data-placement="right" title="Eliminar"><i className="fas fa-trash-alt"></i></button>
                                                 </div>
                                             </div>
                                         </td>

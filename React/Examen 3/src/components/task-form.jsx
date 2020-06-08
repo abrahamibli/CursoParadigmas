@@ -20,7 +20,7 @@ const TaskForm = (props) => {
     const handleSubmitEvent = (e) => {
         e.preventDefault();
         if (props.closeModal !== undefined) {
-            props.updateTask(props.taskValues.id, name, description, urgent);
+            props.updateTask(props.taskValues.id, name, description, urgent, props.taskValues.finished);
             props.closeModal();
         } else {
             props.addTask(name, description, urgent);
